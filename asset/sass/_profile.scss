@@ -1,0 +1,136 @@
+.header {
+  background-color: $topcolor;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: $white;
+  font-weight: 400;
+}
+#profile {
+  background-color: $menubg;
+  .profile_menu {
+    .heading {
+      @extend .header;
+    }
+    .menu_ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background: $white;
+      border: 1px solid $black;
+      li {
+        a {
+          display: block;
+          color: $blackO;
+          font-weight: 400;
+          padding-left: 15px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          border-bottom: 1px solid $black;
+          text-transform: uppercase;
+          font-size: 14px;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        &:hover {
+          background: $menubg;
+        }
+      }
+      .active {
+        a {
+          background: $menubg;
+        }
+      }
+    }
+  }
+  .content {
+    .editsection {
+      .row {
+        div {
+          input {
+            border: none;
+            background-color: transparent;
+            border-bottom: 1px solid $topcolor;
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+    .heading {
+      @extend .header;
+    }
+    .profilesection {
+      background: $white;
+      border: 1px solid $black;
+    }
+    .product-summuri {
+      h6 {
+        background-color: $topcolor;
+        color: $white;
+        text-align: center;
+        margin-bottom: 0;
+        padding: 8px 0px;
+      }
+      .icon-count {
+        text-align: center;
+        background: $white;
+        border: 1px solid $black;
+        .icon {
+          color: $topcolor;
+        }
+      }
+    }
+
+    .bloglist {
+      tbody {
+        td {
+          img {
+            width: 200px;
+          }
+        }
+      }
+    }
+    .addblog {
+      .note-editing-area {
+        background: $white;
+      }
+    }
+    .productlist {
+      tbody {
+        tr {
+          td {
+            img {
+              width: 250px;
+            }
+          }
+          div.imgdiv {
+            width: 150px;
+            max-height: 150px;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+  .summernote {
+    word-wrap: normal;
+  }
+  .orderlist {
+    .card-header {
+      line-height: 14px;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .rating-star {
+    cursor: pointer;
+  }
+}

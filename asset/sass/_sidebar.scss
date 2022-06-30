@@ -1,0 +1,183 @@
+.range {
+  display: block;
+  text-align: center;
+  border: 1px solid #8b8b8b;
+  width: 100%;
+  padding: 15px;
+  font-size: 13px;
+  padding-top: 10px;
+  #slider-range {
+    height: 5px;
+    background: unset;
+  }
+  .ui-slider-range {
+    background-color: $topcolor;
+  }
+  .ui-slider-handle.ui-corner-all {
+    border-radius: 2rem;
+    height: 12px;
+    width: 12px;
+    background-color: $black;
+    border: 2px solid $topcolor;
+  }
+  .ui-slider-horizontal {
+    .ui-slider-handle {
+      top: -0.35em;
+      margin-left: -0.6em;
+    }
+  }
+  p {
+    margin: 0;
+    font-weight: bold;
+    .minimum {
+      width: 80px;
+      display: inline-block;
+      background: transparent;
+      color: black !important;
+      &:focus {
+        border: 0;
+        outline: 0;
+      }
+    }
+    .maximum {
+      @extend .minimum;
+    }
+    span {
+      font-size: 1.5rem;
+      line-height: 0;
+    }
+  }
+}
+
+.pagesidebar {
+  background-color: $white;
+  button.btn.dropdown-toggle.btn-transpertent {
+    border-radius: 0;
+    background: transparent;
+    border: 1px solid $black;
+    font-size: 13px;
+    font-weight: 500;
+    &:focus {
+      border-color: unset;
+      outline: unset;
+      box-shadow: unset;
+      border-radius: 0;
+    }
+  }
+
+  .form-control {
+    &:focus {
+      border-color: black;
+      box-shadow: unset;
+      border-radius: 0;
+    }
+  }
+  .picker {
+    text-transform: none;
+    padding: 8px 10px;
+    width: 100%;
+    border: 1px solid #e8d9f0;
+    option {
+      font-size: 16px;
+      &:hover {
+        background: $topcolor !important;
+      }
+    }
+  }
+  .pricerang {
+    @extend .range;
+  }
+  .src-imp-text {
+    padding: 6px;
+    width: 100%;
+  }
+  .src-btn {
+    @extend .src-imp-text;
+    background-color: $topcolor;
+    border: 2px solid $topcolor;
+    color: $white;
+    font-weight: 500;
+    font-size: 14px;
+    &:focus {
+      border: 2px solid $topcolor;
+      outline: 0;
+    }
+    &:hover {
+      background-color: #670696;
+      border-color: #670696;
+    }
+  }
+  .productsumuri {
+    border: 1px solid #d1d8e0;
+    ul {
+      li {
+        width: 33.16%;
+      }
+      .nav-link {
+        padding: 8px 0px;
+        border: 0;
+        color: black;
+        font-weight: 400;
+        &:hover {
+          @extend .actlink;
+        }
+      }
+      .active {
+        @extend .actlink;
+      }
+    }
+    p {
+      margin-bottom: 5px;
+    }
+    .productsumuri-div {
+      border-bottom: 1px solid $black;
+      a {
+        position: relative;
+        display: block;
+        .img-overly {
+          height: 100%;
+          width: 100%;
+          background: #1e2362a6;
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: #fff;
+          opacity: 0;
+          padding: 25px 0;
+          transition: 0.3s ease;
+          display: block;
+          svg {
+            width: 27px;
+            height: 27px;
+          }
+        }
+        &:hover {
+          .img-overly {
+            opacity: 1;
+          }
+        }
+      }
+      .prdct-name {
+        text-transform: capitalize;
+        color: black;
+        font-size: $def-font;
+      }
+      .reting {
+        display: flex;
+        justify-content: center;
+        color: $black;
+      }
+      .prc {
+        font-weight: 400;
+        svg {
+          font-size: 0.9rem;
+        }
+        .reg {
+          padding: 5px;
+          text-decoration: line-through;
+          color: #8e9194;
+        }
+      }
+    }
+  }
+}

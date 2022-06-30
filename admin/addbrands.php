@@ -1,0 +1,108 @@
+<?php
+    ob_start();
+    $title = "Add Brands || Demo Shop";
+    include_once ("inc/header.php");
+    if(isset($_POST['saveBrand'])){
+        $brand->insert($_POST);
+    };
+    $dir = "../uploads/";
+    
+?>
+                <!-- Bread crumb and right sidebar toggle -->
+                <div class="row page-titles">
+                    <div class="col-md-5 col-8 align-self-center">
+                        <h3 class="text-themecolor">Brand</h3>
+                    </div>
+                </div>
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- Start Page Content -->
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-outline-info">
+                            <div class="card-header">
+                                <h4 class="m-b-0 text-white mess">Add Brand form<a class="float-right text-white" href="brands.php">Back</a></h4>
+                            </div>
+                            <div class="card-body">
+                                <form action="" method="POST" id="addBrndform" enctype="multipart/form-data">
+                                    <div class="form-body ">
+                                        <div class="col-lg-6 col-md-8 col-12 mx-auto p-t-20">
+                                            <?php
+                                                if(isset($brand->suc)){
+                                                    ?>
+                                                    <div class="alert alert-success text-center"><?= $brand->suc ?></div>
+                                                    <?php
+                                                }elseif(isset($brand->err)){
+                                                    ?>
+                                                    <div class="alert alert-warning text-center"><?= $brand->err ?></div>
+                                                    <?php
+                                                }
+                                            ?>
+                                            <div class="col-12">
+                                                <div class="form-group mb-1">
+                                                    <label for="name" class="control-label">Brand Name</label>
+                                                    <input type="text" name="name" id="name" class="form-control" placeholder="Brand name">
+                                                    <input type="hidden" value="<?= WON ?>" name="user">
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-group  mb-1">
+                                                    <label for="logo">Brand logo</label>
+                                                    <input type="file" name="logo" id="logo" data-height="80" class="dropify" data-default-file="<?= $dir ?>default.jpg" />
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-group  mb-1">
+                                                    <label for="cate">Category</label>
+                                                    <select class="form-control" data-get='subcategory' data-target="#subCatBrand" name="category" id='cate'>
+                                                        <option value=""> --Select Category-- </option>
+                                                        <?php
+                                                        $selcat = $db->rnQuery("SELECT * FROM `category` WHERE `status`='1'");
+                                                        while($cat = mysqli_fetch_assoc($selcat)){
+                                                        ?><option value="<?= $cat['id'] ?>"><?= $cat['name'] ?></option><?php
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-group  mb-1">
+                                                    <label for="subCatBrand"> Sub Category</label>
+                                                    <select class="form-control" id="subCatBrand" name="Subcategory">
+                                                        <option value=""> --Select Sub category-- </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-group mb-1">
+                                                    <label class="control-label">Status</label>
+                                                    <div class="form-check">
+                                                        <label class="custom-control custom-radio">
+                                                            <input id="radio1" name="status" type="radio"  value="1"  class="custom-control-input">
+                                                            <span class="custom-control-indicator"></span>
+                                                            <span class="custom-control-description">Active</span>
+                                                        </label>
+                                                        <label class="custom-control custom-radio">
+                                                            <input id="radio2" name="status" type="radio" value="2" class="custom-control-input">
+                                                            <span class="custom-control-indicator"></span>
+                                                            <span class="custom-control-description">Inactive</span>
+                                                        </label>
+                                                        <label for="status" class="error"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions text-center">
+                                        <button type="submit" class="btn btn-success" name="saveBrand"> <i class="fa fa-check"></i> Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <?php
+                    include_once ("inc/footer.php");
+                ?>

@@ -1,0 +1,51 @@
+#vendors {
+  overflow: hidden;
+  background-color: $menubg;
+  .page-title {
+    @extend .allpagetitle;
+  }
+  .vendor-profile {
+    margin-top: 52px;
+    border-radius: 5px;
+    .profile-cover {
+      position: relative;
+      .vendor-photo {
+        width: 45%;
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+      }
+      img.cover-img {
+        border-radius: 5px 5px 0px 0px;
+        height: 130px;
+        width: 100%;
+      }
+    }
+    .profile-dtl {
+      background-color: $white;
+      .vendor-name {
+        font-size: 1.1rem;
+        color: $blackO;
+      }
+      p {
+        font-size: 80%;
+      }
+      margin: 0;
+      padding: 0;
+      .visit-profile {
+        background-color: $topcolor;
+        border-radius: 0px 0px 5px 5px;
+        color: $white;
+        font-weight: 500;
+        font-size: 80%;
+        &:hover {
+          background-color: $hover_primary;
+        }
+        &:focus {
+          background-color: $hover_primary;
+        }
+      }
+    }
+  }
+}

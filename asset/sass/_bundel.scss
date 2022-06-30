@@ -1,0 +1,22 @@
+#bundelpro{
+    overflow: hidden;
+    background-color: $menubg;
+    h4.page-title{
+       @extend .allpagetitle;
+    }
+    .featured-sidebar{
+       @extend .pagesidebar;
+        
+    }
+    .product{
+        @extend .ftrdprodct;
+        .prdct-name{
+            font-size: $def-font;
+        }
+        .prdimg{
+            span{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

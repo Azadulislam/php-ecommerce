@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600&family=Roboto:wght@300;400;500&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+@import "variable";
+body{
+    font-size: 14px;
+    font-family: $roboto;
+}
+@import "header";
+// ============body content================ 
+@import "home";
+
+@import "sidebar";
+@import "search";
+.actlink{
+    background-color: $topcolor;
+    color: $white !important;
+    border-radius: 0;
+}
+@import "featured";
+#dealpro{
+    @extend .allsubPage;
+}
+@import "bundel";
+@import "customer";
+#brands{
+    @extend .allcatbrand;
+}
+
+@import "vendors";
+@import "blog";
+@import "contact";
+#latest{
+    @extend .allsubPage;
+}
+// ============body content end================ 
+@import "footer";
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 5px;
+    background:lightgray;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: $topcolor;
+} 
+@import "ragistration";
+@import "login";
+@import "profile";
+@import "view-product";
+@import "cartlist";
+@import "premium";
+

@@ -1,0 +1,78 @@
+#registration{
+    background: $menubg;
+    .regi_form{
+        .sit_logo{
+            padding: .5rem;
+            background: $topcolor;
+            border-top-left-radius: .3rem;
+            border-top-right-radius: .3rem;
+            text-align: center;
+        }
+        .form_con{
+            border-bottom-left-radius: .3rem;
+            border-bottom-right-radius: .3rem;
+            border: 1px solid $black;
+            background: $white; 
+            hr{
+                background: radial-gradient(#470467 , #fff );
+                height: 3px;
+                border: 0;
+            }
+            .form_header{
+                padding: .5rem;
+                background: $menubg;
+            }
+            .form-group{
+                position: relative;
+                input{
+                    padding: .5rem;
+                    &::placeholder{
+                        color: $blackO;
+                        font-size: 12px;
+                        font-weight: 500;
+                        vertical-align: middle;
+                        text-transform: uppercase;
+                    }
+                    &:focus{
+                        &::placeholder{
+                            visibility: hidden;
+                        }
+                    }
+                }
+                .regbtn{
+                    background: #73677b;
+                    color: $white;
+                    transition: .3s;
+                    &:hover{
+                        background: $topcolor;
+                    }
+                    &:focus{
+                        outline: 0;
+                        box-shadow: 0;
+                    }
+                }
+                .error{
+                    color: red;
+                }
+            }
+            .has-error{
+                input{
+                    border: 1px solid red !important;
+                    &:focus{
+                        outline: 0;
+                        border: 1px solid red !important;
+                    }
+                }
+            }
+            .no-error{
+                input{
+                    border: 1px solid green !important;
+                    &:focus{
+                        outline: 0;
+                        border: 1px solid green !important;
+                    }
+                }
+            }
+        }
+    }
+}

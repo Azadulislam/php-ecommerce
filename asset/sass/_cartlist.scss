@@ -1,0 +1,20 @@
+#cartlist{
+    .heading{
+        @extend .header;
+    }
+    .cartpro{
+        background: $white;
+        overflow-x: auto;
+        font-size: 18px;
+        .prodcut_img{
+            height: 100px;
+            overflow: hidden;
+        }
+        
+    }
+    .subtotal{
+        p{
+            font-weight: 500;
+        }
+    }
+}

@@ -1,0 +1,659 @@
+#home {
+  background-color: $menubg;
+  overflow: hidden;
+  aside.sidemenu {
+    background-color: $white;
+    box-shadow: 0 0 8px 0px #d8d8d8;
+    position: relative;
+    height: 100%;
+    ul {
+      li {
+        text-transform: uppercase;
+        font-size: 12px;
+        padding: 12px 15px;
+        border-bottom: 1px solid $black;
+        font-weight: 400;
+        svg {
+          transition: 0.3s;
+        }
+        &:last-child {
+          border-bottom: 1px solid transparent;
+        }
+        a {
+          color: $blackO;
+          text-decoration: none;
+          width: 95%;
+          display: inline-block;
+          position: relative;
+        }
+        &:hover {
+          .hobdiv {
+            display: block;
+          }
+          svg {
+            transform: translateX(8px);
+          }
+        }
+        .hobdiv {
+          position: absolute;
+          left: 100%;
+          background: $white;
+          top: 0;
+          right: 0;
+          padding: 15px;
+          overflow: hidden;
+          box-shadow: 0 0 8px 0px #d8d8d8;
+          width: 855px;
+          height: 100%;
+          display: none;
+          overflow-y: scroll;
+          z-index: 99;
+          &::-webkit-scrollbar {
+            width: 5px;
+            background: $black;
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: $white;
+            border-radius: 1rem;
+          }
+          .hovlist {
+            margin-bottom: 50px;
+            p {
+              margin-bottom: 2px;
+              border-bottom: 2px solid $black;
+              padding-bottom: 5px;
+            }
+            li {
+              padding: 5px;
+              font-weight: 400;
+              a {
+                transition: 0.3s;
+                text-transform: capitalize;
+                &:hover {
+                  font-weight: 600;
+                  transform: translateX(10px);
+                }
+              }
+            }
+          }
+        }
+      }
+      li.more {
+        border-top: 1px solid $black;
+        text-align: center;
+        font-weight: 400;
+        &:hover {
+          svg {
+            transform: translateX(0px);
+          }
+        }
+      }
+    }
+  }
+  .homeslid {
+    box-shadow: 0 0 8px 0px #d8d8d8;
+    .owl_one {
+      .item {
+        max-height: 486px;
+      }
+    }
+    .prv {
+      font-size: 3.5rem;
+      color: $white;
+      position: absolute;
+      top: 50%;
+      z-index: 99;
+      left: 20px;
+      transform: translateY(-50%);
+      border: none;
+      background-color: transparent;
+      outline: 0;
+      text-shadow: 1px 4px 10px $white;
+      transition: 0.3s ease;
+      z-index: 1;
+      &:hover {
+        color: $blackO;
+      }
+    }
+    .nxt {
+      @extend .prv;
+      right: 20px;
+      left: unset;
+    }
+  }
+  #addsec {
+    a {
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}
+.dealprod {
+  position: relative;
+  overflow: hidden;
+  &:hover {
+    .leftbtn {
+      left: 5px;
+    }
+  }
+  .leftbtn {
+    width: 36px;
+    position: absolute;
+    top: 5px;
+    left: -100%;
+    transition: 0.5s ease;
+    .leftbtn-item {
+      display: block;
+      background-color: $blackO;
+      color: $white;
+      padding: 5px;
+      margin-bottom: 5px;
+    }
+  }
+  .imagediv {
+    height: 210px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .prdct-desc {
+    padding: 10px;
+    .reting {
+      svg {
+        color: $black;
+      }
+    }
+    .prc {
+      .dic {
+        text-decoration: line-through;
+      }
+      .reg {
+        color: $topcolor;
+        font-weight: 600;
+      }
+    }
+    .addtocart {
+      background: $black;
+      color: $blackO;
+      &:hover {
+        background: $topcolor;
+        color: $white;
+        svg {
+          color: $menubg;
+        }
+      }
+    }
+  }
+}
+#dealProduct {
+  .title {
+    @extend .alltitle;
+  }
+  .product {
+    @extend .dealprod;
+  }
+  button.prv-tow {
+    @extend .slidbtn;
+  }
+  button.nxt-tow {
+    @extend .slidbtn;
+    left: unset;
+    right: -20px;
+  }
+}
+.ftrdprodct {
+  &:hover {
+    box-shadow: 4px 5px 3px $black;
+  }
+  .prdimg {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    span {
+      @extend .imgmdl;
+    }
+    .cond {
+      @extend .allcond;
+    }
+    .view {
+      @extend .allview;
+    }
+    &:hover {
+      .view {
+        display: block;
+      }
+      span {
+        display: block;
+        @include animation(0, 0.5s, bounce);
+      }
+    }
+    .imagediv {
+      text-align: center;
+      height: 210px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+  border: 1px solid $black;
+  border-radius: 5px;
+  background-color: $white;
+  .prdct-desc {
+    line-height: 1.3;
+    .prdct-name {
+      border-bottom: 1px solid $black;
+      padding: 8px;
+      margin-bottom: 8px;
+      .prdname {
+        color: black;
+      }
+    }
+    .reting {
+      svg {
+        color: $black;
+      }
+    }
+    .prc {
+      .dic {
+        text-decoration: line-through;
+      }
+      .reg {
+        color: $topcolor;
+        font-weight: 600;
+      }
+    }
+    .shopname {
+      border-bottom: 1px solid $black;
+      color: $blackO;
+      text-decoration: none;
+      padding-bottom: 5px;
+    }
+    .footbtn {
+      display: flex;
+      justify-content: space-around;
+      padding-right: 20px;
+      padding-left: 20px;
+      .footbtn-item {
+        background: $black;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        align-items: center;
+        padding: 5px;
+        box-sizing: content-box;
+        text-align: center;
+        display: inline-block;
+        border: 0;
+        cursor: pointer;
+        strong {
+          background: $topcolor;
+          padding-top: 8px;
+          height: 30px;
+          padding-bottom: 5px;
+          border-radius: 50%;
+          display: block;
+
+          color: $white;
+          svg {
+            font-size: 14px;
+            display: inline-block;
+          }
+        }
+        &:hover {
+          strong {
+            @include animation(0, 0.5s, bounce, ease);
+          }
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+#feturedPrdct {
+  background-color: $menubg;
+  .title {
+    @extend .alltitle;
+  }
+  .product {
+    @extend .ftrdprodct;
+  }
+  button.prv-three {
+    @extend .slidbtn;
+  }
+  button.nxt-three {
+    @extend .slidbtn;
+    left: unset;
+    right: -20px;
+  }
+}
+#bundleprd {
+  .title {
+    @extend .alltitle;
+  }
+  .product {
+    @extend .bunprd;
+  }
+  button.prv-four {
+    @extend .slidbtn;
+  }
+  button.nxt-four {
+    @extend .slidbtn;
+    left: unset;
+    right: -20px;
+  }
+}
+
+.allclspro {
+  border: 1px solid $black;
+  &:hover {
+    box-shadow: 4px 5px 3px $black;
+  }
+  .prdimg {
+    position: relative;
+    height: 210px;
+    overflow: hidden;
+    .view {
+      @extend .allview;
+    }
+    .imgmdlbtn {
+      @extend .allimgmdl;
+    }
+    &:hover {
+      .view {
+        display: block;
+      }
+      span {
+        display: block;
+        @include animation(0, 0.5s, bounce);
+      }
+    }
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .prdct-desc {
+    .reting {
+      color: $black;
+    }
+    .prdct-name {
+      text-transform: capitalize;
+      border-bottom: 1px solid $black;
+      padding: 5px;
+      margin: 0;
+    }
+    .prc {
+      .reg {
+        font-weight: 600;
+        color: $blackO;
+        padding: 5px;
+      }
+    }
+    .shopname {
+      border-top: 1px solid $black;
+      color: $blackO;
+      padding: 5px;
+      margin: 0;
+    }
+  }
+}
+#classifiedprd {
+  background-color: $menubg;
+  .title {
+    @extend .alltitle;
+  }
+  .product {
+    @extend .allclspro;
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+  button.prv-five {
+    @extend .slidbtn;
+  }
+  button.nxt-five {
+    @extend .slidbtn;
+    left: unset;
+    right: -20px;
+  }
+}
+
+//============vendor css ===========
+
+#vendor {
+  padding: 100px 0px;
+  background: url("../../image/parralax_vendor.jpg") fixed top center;
+  h5.title {
+    @extend .alltitle;
+    color: $white;
+    text-transform: uppercase;
+    span {
+      padding-bottom: 3px;
+    }
+  }
+  .owl_six {
+    .vendor-img {
+      border: 0;
+      border-right: 1px solid #b18f8f;
+      border-top: 1px solid #efefef;
+      height: auto;
+      a {
+        padding: 20px;
+        display: block;
+        background: #fff;
+        margin-right: 1px;
+      }
+      img {
+        height: 80px;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+  .prv_six {
+    @extend .sldbtntwo;
+  }
+  .nxt_six {
+    @extend .sldbtntwo;
+    left: unset;
+    right: -45px;
+    text-decoration: none;
+  }
+}
+//============vendor css end===========
+
+#womenfashion {
+  background: $menubg;
+  .womenfashion_img {
+    overflow: hidden;
+    height: 437px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    h5 {
+      text-shadow: 2px 2px 0px #27313c;
+    }
+    a.btn {
+      box-shadow: 2px 3px 7px #333;
+    }
+  }
+  .womenfashion-content {
+    border: 1px solid $black;
+    .product {
+      @extend .bunprd;
+      .prdimg {
+        height: 210px;
+        img {
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+    .nav-link {
+      font-weight: 600;
+      color: black;
+    }
+    .prv_svn {
+      @extend .slidbtn;
+    }
+    .nxt_svn {
+      @extend .slidbtn;
+      left: unset;
+      right: -20px;
+    }
+  }
+}
+#blog {
+  padding: 50px 0px;
+  background: url("../../image/parralax_blog.jpg") center fixed;
+  background-size: cover;
+  h5.title {
+    @extend .alltitle;
+    color: $white;
+    span {
+      padding-bottom: 3px;
+    }
+  }
+  .blog-link {
+    text-decoration: none;
+  }
+  .blog-content {
+    border-radius: 5px;
+    overflow: hidden;
+    .blog-text {
+      background: #fff;
+      padding: 15px;
+      line-height: 1.3;
+      font-family: sans-serif;
+      .name {
+        margin-bottom: 10px;
+        height: 54px;
+        color: #333;
+        display: block;
+      }
+      p.woner {
+        margin-bottom: 0;
+        font-size: 13px;
+        color: #9e9fa0;
+        text-transform: capitalize;
+      }
+    }
+    img {
+      width: 100%;
+      height: 165px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+#resumeSec {
+  background-color: $menubg;
+  .resme-con {
+    padding-bottom: 50px;
+  }
+  .ltprdct {
+    .ltp-title {
+      @extend .alltitle;
+      span {
+        padding-bottom: 3px;
+      }
+    }
+    .ltp-con {
+      background: $white;
+      border: 1px solid $black;
+      transition: 0.3s ease-in-out;
+
+      .ltp-desc {
+        padding: 10px;
+        padding-left: 20px;
+        p {
+          margin: 0;
+          font-size: 14px;
+          font-weight: 500;
+          margin: 3px 0px;
+          color: $blackO;
+        }
+        .category {
+          font-size: 13px;
+          color: #17161685;
+        }
+        .reting {
+          display: block;
+          overflow: hidden;
+          color: $black;
+          svg {
+            float: left;
+          }
+        }
+        .prc {
+          color: $topcolor;
+          font-size: 14px;
+          .dic {
+            text-decoration: line-through;
+          }
+        }
+      }
+      &:hover {
+        box-shadow: 5px 5px 6px $black;
+      }
+      .ltp-img {
+        img {
+          height: 110px;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+  }
+  h5.title {
+    @extend .alltitle;
+    text-transform: uppercase;
+    span {
+      padding-bottom: 3px;
+    }
+  }
+  .owl_eight {
+    .brand-logo {
+      border: 0;
+      border-right: 1px solid $black;
+      border-top: 1px solid $black;
+      height: auto;
+      a {
+        padding: 20px;
+        display: block;
+        background: #fff;
+        margin-right: 1px;
+      }
+      img {
+        height: 90px;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+  .prv_eight {
+    @extend .sldbtntwo;
+  }
+  .nxt_eight {
+    @extend .sldbtntwo;
+    left: unset;
+    right: -45px;
+  }
+}

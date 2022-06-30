@@ -1,0 +1,22 @@
+#premium{
+    background: $menubg;
+    overflow: hidden;
+    .page-title{
+        @extend .allpagetitle;
+    }
+    .badge{
+        img{
+            width: 80px;
+        }
+    }
+    .premiumdiv{
+        background: $white;
+        transition: .3s ease;
+        &:hover{
+            box-shadow: 0 16px 38px -12px rgba(0,0,0,.56), 0 4px 25px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+        }
+        p{
+            padding:15px;
+        }
+    }
+}

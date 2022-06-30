@@ -1,0 +1,150 @@
+#footerone {
+  background-color: #11628d;
+  padding: 50px 0px;
+  p {
+    color: $white;
+  }
+  .footertitle {
+    text-transform: uppercase;
+    color: $white;
+    border-bottom: 2px solid $white;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  .footerlogo {
+    @extend .logo;
+  }
+  .footer-link {
+    li {
+      border-bottom: 1px solid $white;
+      font-size: 13px;
+      &:last-child {
+        border-bottom: 1px solid transparent;
+      }
+      a {
+        color: $white;
+        text-transform: capitalize;
+        text-decoration: none;
+        padding: 5px 0px;
+        display: block;
+      }
+      &:hover {
+        svg {
+          @include animation(0, 0.5s, bounce);
+        }
+      }
+    }
+  }
+  .foot-add-table {
+    color: white;
+    font-size: 13px;
+    th {
+      text-transform: capitalize;
+      font-weight: 500;
+    }
+    td {
+      a {
+        color: white;
+      }
+    }
+  }
+  .social-icon {
+    margin: 10px 0px;
+    a {
+      display: inline-block;
+      color: $white;
+      border-radius: 3px;
+      transition: 0.3s ease;
+      svg {
+        height: 35px;
+        width: 35px;
+        padding: 8px;
+        border-radius: 3px;
+        display: block;
+        text-shadow: 0px 0px #2b88ad, 1px 1px #2b88ad, 2px 2px #2b88ad,
+          3px 3px #2b88ad, 4px 4px #2b88ad, 5px 5px #2b88ad, 6px 6px #2b88ad,
+          7px 7px #2b88ad, 8px 8px #2b88ad, 9px 9px #2b88ad, 10px 10px #2b88ad,
+          11px 11px #2b88ad, 12px 12px #2b88ad, 13px 13px #2b88ad,
+          14px 14px #2b88ad, 15px 15px #2b88ad, 16px 16px #2b88ad,
+          17px 17px #2b88ad, 18px 18px #2b88ad, 19px 19px #2b88ad,
+          20px 20px #2b88ad, 21px 21px #2b88ad, 22px 22px #2b88ad,
+          23px 23px #2b88ad, 24px 24px #2b88ad, 25px 25px #2b88ad,
+          26px 26px #2b88ad, 27px 27px #2b88ad, 28px 28px #2b88ad,
+          29px 29px #2b88ad, 30px 30px #2b88ad;
+      }
+
+      &:hover {
+        background-color: $white;
+      }
+    }
+    .facebook {
+      background: #3b579d;
+      &:hover {
+        color: #3b579d;
+      }
+    }
+    .twitter {
+      background: #00aced;
+      &:hover {
+        color: #00aced;
+      }
+    }
+    .google {
+      background-color: #dd4a3a;
+      &:hover {
+        color: #dd4a3a;
+      }
+    }
+    .pinterest {
+      background-color: #cb2026;
+      &:hover {
+        color: #cb2026;
+      }
+    }
+    .youtube {
+      background-color: #e62117;
+      &:hover {
+        color: #e62117;
+      }
+    }
+    .skype {
+      background-color: #01aef2;
+      &:hover {
+        color: #01aef2;
+      }
+    }
+  }
+}
+
+#footer {
+  background-color: $topcolor;
+  .copytext {
+    margin-top: 10px;
+    color: white;
+    margin-bottom: 20px;
+    a {
+      color: white;
+    }
+  }
+}
+#backToTop {
+  background-color: $topcolor;
+  border: 2px solid $topcolor;
+  color: $white;
+  padding: 5px;
+  display: inline-block;
+  position: fixed;
+  bottom: -100px;
+  right: 20px;
+  transition: 0.3s ease;
+  svg {
+    display: inline-block;
+    width: 28px;
+    height: 23px;
+  }
+  &:hover {
+    background-color: $black;
+    color: $topcolor;
+  }
+}

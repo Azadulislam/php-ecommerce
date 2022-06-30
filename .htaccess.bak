@@ -1,0 +1,81 @@
+RewriteEngine On
+
+RewriteBase http://localhost/ecommerce/
+
+ErrorDocument 404 http://localhost/azad-ecommerce/404.html
+ErrorDocument 400 http://localhost/azad-ecommerce/400.html
+ErrorDocument 403 http://localhost/azad-ecommerce/403.html
+ErrorDocument 500 http://localhost/azad-ecommerce/500.html
+ErrorDocument 503 http://localhost/azad-ecommerce/503.html
+
+
+
+RewriteRule ^home index.php
+
+RewriteRule ^customer-dashboard customer/customer.php
+
+#RewriteRule ^404 404.html
+
+RewriteRule ^cart-list customer/cartlist.php
+
+RewriteRule ^blog-list customer/blogs.php
+
+RewriteRule ^wish-list customer/wishlist.php
+
+RewriteRule ^wallet-history customer/wallet.php
+
+RewriteRule ^order-list customer/order.php
+
+RewriteRule ^add-classified-product customer/addproduct.php
+
+RewriteRule ^add-blog customer/addblog.php
+
+RewriteRule ^edit-blog customer/editblog.php
+RewriteRule ^review customer/review.php
+
+RewriteRule ^edit-profile customer/editprofile.php
+
+RewriteRule ^user-login login.php
+
+RewriteRule ^product customer/product.php
+
+RewriteRule ^edit-product customer/editproduct.php
+
+RewriteRule ^vendor-dashboard seller/vendor.php
+
+RewriteRule ^vendor-wallet seller/wallet.php
+
+RewriteRule ^vendor-blog seller/blogs.php
+
+RewriteRule ^vendor-product seller/product.php
+
+RewriteRule ^vendor-cartlist seller/cartlist.php
+
+RewriteRule ^vendor-Seles seller/order.php
+
+RewriteRule ^vendor-addproduct seller/addproduct.php
+
+RewriteRule ^vendor-addblog seller/addblog.php
+
+RewriteRule ^vendor-edit-product seller/edit-product.php
+
+RewriteRule ^vendor-edit-blog seller/editblog.php
+
+RewriteRule ^vendor-edit-profile seller/editprofile.php
+
+RewriteRule ^todaysdeal todays_deal.php
+
+
+
+#RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+
+#RewriteRule ^ %1 [R=301,L]
+
+#RewriteCond %{REQUEST_FILENAME} !-d
+
+#RewriteCond %{REQUEST_FILENAME}.php -f
+
+#RewriteRule ^(.*?)/?$ $1.php [NC,L]
+
+
+

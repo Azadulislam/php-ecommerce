@@ -1,0 +1,49 @@
+#customerpro{
+    overflow: hidden;
+    background-color: $menubg;
+
+    h4.page-title{
+       @extend .allpagetitle;
+    }
+    .featured-sidebar{
+       @extend .pagesidebar;
+        
+    }
+    .product{
+        @extend .allclspro;
+        .prdct-name{
+            font-size: $def-font;
+        }
+        .prdimg{
+            span{
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .pagetooter{
+        .pgntn{
+            list-style: none;
+            padding: 0;
+            li{
+                display: inline-block;
+                padding: .3rem  .8rem;
+                border: 1px solid $black;
+                margin-right: 10px;
+                background-color: transparent;
+                transition: .3s ease;
+                a{
+                    color: black;
+                }
+                &:hover{
+                    background-color: $topcolor;
+                    a{
+                        color: $white;
+                    }
+                }
+            }
+            .page-active{
+                background: $black;
+            }
+        }
+    }
+}

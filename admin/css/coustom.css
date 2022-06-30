@@ -1,0 +1,200 @@
+.user-profile {
+  position: relative;
+  background-size: cover !important;
+}
+#main-wrapper
+  > div.page-wrapper
+  > div
+  > div:nth-child(4)
+  > div:nth-child(2)
+  > div
+  > div
+  > div.pro-img {
+  margin-top: -213px !important;
+
+  margin-bottom: 85px !important;
+}
+.round {
+  width: 50px !important;
+  height: 50px !important;
+  background: #1e88e5;
+}
+.logo {
+  text-shadow: 0px 0px 0px #280a44, 1px 2px 1px #280a44, 2px 3px 2px #280a44,
+    3px 4px 2px #280a44;
+
+  color: #cfe8ff !important;
+
+  font-size: 2rem;
+}
+
+.mh-500 {
+  max-height: 500px;
+
+  overflow-y: auto;
+}
+
+.card-body.mh-500::-webkit-scrollbar {
+  width: 5px;
+}
+
+.err {
+  position: fixed;
+
+  top: 80px;
+
+  right: 50px;
+
+  z-index: 99999;
+
+  display: none;
+}
+
+.err-close {
+  font-size: 15px;
+
+  background-color: white;
+
+  cursor: pointer;
+}
+
+#data > td:nth-child(5) > div,
+#main-wrapper .profile-text {
+  position: relative;
+}
+
+#data > td:nth-child(5) > div > div,
+#main-wrapper
+  > div.page-wrapper
+  > div
+  > div:nth-child(3)
+  > div.col-lg-8
+  > div
+  > div
+  > div
+  > table
+  > tbody
+  > tr:nth-child(1)
+  > td:nth-child(4)
+  > div
+  > div {
+  top: 100% !important;
+
+  left: -27% !important;
+}
+
+.suc {
+  position: fixed;
+
+  top: 80px;
+
+  display: none;
+
+  right: 50px;
+
+  z-index: 99999;
+}
+
+.error {
+  color: red;
+}
+
+.has-error input {
+  border-color: red;
+}
+
+.no-error input {
+  border-color: green;
+}
+
+.image_gallery {
+  height: 102px;
+
+  overflow: hidden;
+}
+
+.form-group.img {
+  height: 100px;
+}
+
+.form-group.img img {
+  height: 100px;
+}
+
+#login {
+  background-image: url("../../image/repeat.jpg");
+
+  background-attachment: fixed;
+
+  background-repeat: repeat;
+}
+
+#login .loginform {
+  margin-top: 150px;
+
+  margin-bottom: 50px;
+
+  background: #1e88e5;
+
+  box-sizing: border-box;
+
+  border: 5px solid white;
+
+  box-shadow: 2px 4px 10px 1px #444;
+}
+
+#login .loginform h1 .title1 {
+  color: #b1abab;
+
+  text-shadow: 0px 0px 0px #280a44, 1px 2px 1px #280a44, 2px 3px 2px #280a44,
+    3px 4px 2px #280a44;
+}
+
+#login .loginform h1 .title2 {
+  color: #b789e2;
+
+  text-shadow: 0px 0px 0px #280a44, 1px 2px 1px #280a44, 2px 3px 2px #280a44,
+    3px 4px 2px #280a44;
+}
+
+#login .loginform .input-group .input-group-text {
+  background-color: #1e88e5;
+
+  color: #ccc;
+}
+
+#login .loginform button:hover {
+  color: #eeeeee;
+
+  background-color: blueviolet;
+
+  box-shadow: 0px 0px 5px #2e0a50;
+}
+
+#login .loginform hr {
+  background-color: blueviolet;
+}
+
+#login .loginform hr {
+  background-color: blueviolet;
+}
+
+#login .loginform hr {
+  background-color: blueviolet;
+}
+
+#login .info {
+  margin-bottom: 100px;
+
+  background: #1e88e5;
+
+  box-sizing: border-box;
+
+  border: 5px solid white;
+
+  box-shadow: 2px 4px 10px 1px #444;
+}
+
+.profile .img-fluid {
+  height: 150px;
+}

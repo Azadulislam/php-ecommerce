@@ -1,0 +1,76 @@
+.contact-title{
+    @extend .allpagetitle;
+    text-align: start;
+    span{
+        padding-left: 0px;
+        &::after{
+            display: none;
+        }
+    }
+}
+#contact{
+    background-color: $menubg;
+    div.contact_left_one{
+        background-color: $white;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid $black;
+        .contact_left_title{
+            @extend .contact-title;
+        }
+        .cont_list{
+            li{
+                display: flex;
+                margin-bottom: 15px;
+                .cont_icon{
+                    display: inline-block;
+                    background: $black;
+                    color: #fff;
+                    padding: 11px;
+                    border-radius: 50%;
+                    height: 40px;
+                    width: 40px;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    svg{
+                        display: block;
+                    }
+                    .fa-globe-asia{
+                        font-size: 1.1rem;
+                    }
+                }
+                .contact_add{
+                    p{
+                        margin-bottom: 0px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .contact_left_two{
+        background-color: $white;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid $black;
+        .contact_left_title_two{
+            @extend .contact-title;
+        }
+    }
+    .contact_form{
+        .contact_right_title{
+            @extend .contact-title;
+        }
+        .name,.email,.subj,.mess{
+            padding: 5px 10px;
+            border: 1px solid $black;
+            outline: none;
+            margin-bottom: 10px;
+        }
+        .cont_btn{
+            color: $white;
+            background-color: $topcolor;
+            font-weight: 500;
+        }
+    }
+}
